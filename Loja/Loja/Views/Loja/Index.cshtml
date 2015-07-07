@@ -1,0 +1,28 @@
+﻿@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title></title>
+</head>
+<body>
+    <div>
+        <button id="botaoLoja"></button>
+        rawr
+    </div>
+    <script src="//code.jquery.com/jquery-1.11.3.min.js"></script>
+    <script>
+        $(function () {
+            $("#botaoLoja").click(function () {
+                $.get("http://localhost/Loja.WebApi/api/token/generatetoken").success(function (data) { alert(data.token); });
+            });
+        });
+
+    </script>
+</body>
+
+</html>
